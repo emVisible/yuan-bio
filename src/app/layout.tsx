@@ -12,6 +12,25 @@ const geist = Geist({
   subsets: ["latin"],
 });
 
+function buildSiteVerification(): Metadata["verification"] | undefined {
+  const verification: NonNullable<Metadata["verification"]> = {};
+  const other: Record<string, string> = {};
+
+  if (process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION) {
+    verification.google = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+  }
+  if (process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION) {
+    other["msvalidate.01"] = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
+  }
+  if (Object.keys(other).length > 0) {
+    verification.other = other;
+  }
+
+  return Object.keys(verification).length > 0 ? verification : undefined;
+}
+
+const siteVerification = buildSiteVerification();
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -45,9 +64,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: { canonical: SITE_URL },
-  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-    ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
-    : {}),
+  ...(siteVerification ? { verification: siteVerification } : {}),
 };
 
 export default function RootLayout({

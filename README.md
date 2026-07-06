@@ -18,6 +18,7 @@ npm run dev
 |------|------|
 | `NEXT_PUBLIC_SITE_URL` | 站点地址，如 `https://yuanbio.com` |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Search Console 验证（可选） |
+| `NEXT_PUBLIC_BING_SITE_VERIFICATION` | Bing Webmaster 验证（可选） |
 | `NEXT_PUBLIC_ADSENSE_CLIENT` | AdSense 发布商 ID（可选） |
 | `NEXT_PUBLIC_ADSENSE_SLOT_*` | 广告位 ID（可选） |
 
