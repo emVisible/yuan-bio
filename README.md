@@ -1,8 +1,22 @@
-# 缘简 YuanBio
+# YuanBio · 缘简
 
-海外华人相亲简历在线制作器。填写 → 选模板 → 导出 PDF 简历与名片图。免费、无需注册，数据保存在浏览器。
+> A resume builder for overseas Chinese singles — fill in your profile, pick a template, and export a polished PDF résumé and a shareable name-card image.
 
-## 开发
+YuanBio (缘简) is a free, registration-free online tool for creating matchmaking profiles ("相亲简历"). Your data stays entirely in your browser — no account, no server storage.
+
+---
+
+## ✨ Features
+
+- **Guided profile editor** — fill in your details step by step.
+- **Beautiful templates** — choose a layout that fits you.
+- **One-click export** — generate a PDF résumé and a name-card image.
+- **Privacy first** — everything is saved locally in your browser; nothing is uploaded.
+- **No sign-up** — just open and start.
+
+---
+
+## 🚀 Getting Started
 
 ```bash
 npm install
@@ -10,18 +24,26 @@ cp .env.example .env.local
 npm run dev
 ```
 
-## 部署
+Then open [http://localhost:3000](http://localhost:3000).
 
-推送到 GitHub，用 [Vercel](https://vercel.com) 导入项目，配置环境变量后部署：
+---
 
-| 变量 | 说明 |
-|------|------|
-| `NEXT_PUBLIC_SITE_URL` | 站点地址，如 `https://yuanbio.com` |
-| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Search Console 验证（可选） |
-| `NEXT_PUBLIC_BING_SITE_VERIFICATION` | Bing Webmaster 验证（可选） |
-| `NEXT_PUBLIC_ADSENSE_CLIENT` | AdSense 发布商 ID（可选） |
-| `NEXT_PUBLIC_ADSENSE_SLOT_*` | 广告位 ID（可选） |
+## 🌐 Deploy
 
-## 技术栈
+Push the repository to GitHub, import the project on [Vercel](https://vercel.com), configure the environment variables below, and deploy.
 
-Next.js · TypeScript · Tailwind CSS · jspdf · html2canvas
+| Variable | Description |
+|----------|-------------|
+| `NEXT_PUBLIC_SITE_URL` | Site URL, e.g. `https://yuanbio.com` |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Google Search Console verification (optional) |
+| `NEXT_PUBLIC_BING_SITE_VERIFICATION` | Bing Webmaster verification (optional) |
+| `NEXT_PUBLIC_ADSENSE_CLIENT` | AdSense publisher ID (optional) |
+| `NEXT_PUBLIC_ADSENSE_SLOT_*` | Ad slot IDs (optional) |
+
+---
+
+## 🛠 Tech Stack
+
+Next.js · TypeScript · Tailwind CSS · jsPDF · html2canvas
+
+---
