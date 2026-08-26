@@ -2,7 +2,7 @@
 
 > A resume builder for overseas Chinese singles — fill in your profile, pick a template, and export a polished PDF résumé and a shareable name-card image.
 
-YuanBio (缘简) is a free, registration-free online tool for creating matchmaking profiles ("相亲简历"). Your data stays entirely in your browser — no account, no server storage.
+YuanBio is a free, registration-free online tool for creating matchmaking profiles. Your data stays entirely in your browser — no account, no server storage.
 
 ---
 
